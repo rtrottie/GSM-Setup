@@ -53,7 +53,7 @@ def GSM_Setup():
     final = ase.io.read(final_pos)
     if not os.path.exists('scratch'):
         os.makedirs('scratch')
-    ase.io.write('scratch/initial000.xyz',[start,final])
+    ase.io.write('scratch/initial0000.xyz',[start,final])
 
 if os.path.basename(sys.argv[0]) == 'GSM_Setup.py':
     GSM_Setup()
