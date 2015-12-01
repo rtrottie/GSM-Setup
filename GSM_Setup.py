@@ -26,6 +26,8 @@ def GSM_Setup():
         jinja_vars['IMAGES'] = sys.argv[3]
 
 
+
+
     start_pos = os.path.join(start, 'CONTCAR') if os.path.exists(os.path.join(start, 'CONTCAR')) else os.path.join(start, 'POSCAR')
     final_pos = os.path.join(final, 'CONTCAR') if os.path.exists(os.path.join(final, 'CONTCAR')) else os.path.join(final, 'POSCAR')
 
@@ -34,6 +36,9 @@ def GSM_Setup():
     shutil.copy(os.path.join(file_loc, 'status'), 'status')
     shutil.copy(start_pos, 'start')
     shutil.copy(final_pos, 'final')
+    shutil.copy(os.path.join(start, 'INCAR'), 'INCAR')
+    shutil.copy(os.path.join(start, 'KPOINTS'), 'KPOINTS')
+    shutil.copy(os.path.join(start, 'POTCAR'), 'POTCAR')
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(file_loc))
 
