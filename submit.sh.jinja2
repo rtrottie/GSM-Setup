@@ -60,5 +60,6 @@ LD_LIBRARY_PATH=/export/home/apps/compile/gcc.5.1.0/lib64:/opt/openmpi/lib:/opt/
 export OMP_NUM_THREADS=1
 export VASP_SCRIPT={{ VASP_SCRIPT }}
 export VASP_NCORE={{ nntasks_per_node }}
+export VASP_PROCS={{ tasks }}
 export VASP_PP_PATH={{ VASP_PP_PATH }}
 ./gfstringq.exe
