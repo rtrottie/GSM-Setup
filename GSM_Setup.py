@@ -49,7 +49,7 @@ def GSM_Setup():
         template = env.get_template('inpfileq.jinja2')
         f.write(template.render(jinja_vars))
 
-    os.fchdir('grad.py', 755)
+    os.fchmod('grad.py', 755)
     start = ase.io.read(start_pos)
     final = ase.io.read(final_pos)
     if not os.path.exists('scratch'):
